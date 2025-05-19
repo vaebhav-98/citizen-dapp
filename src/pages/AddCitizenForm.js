@@ -1,73 +1,111 @@
-
-import useCitizenContract from '../hooks/useCitizenContract';
-import styles from './AddCitizenForm.module.css';
+import Layout from "../components/Layout";
+import useCitizenContract from "../hooks/useCitizenContract";
 
 const AddCitizenForm = () => {
-    const { form, handleChange, handleSubmit, loading } = useCitizenContract();
+  const { form, handleChange, handleSubmit, loading } = useCitizenContract();
 
-    return (
-        <div className={styles.container}>
-            <h2 className={styles.header}>Add New Citizen</h2>
-            <p className={styles.subheader}>Please provide the details below to add a new citizen.</p>
+  return (
+    <Layout>
+      <form onSubmit={handleSubmit}>
+        <div className="shadow sm:overflow-hidden sm:rounded-md">
+          <div className="space-y-6 bg-white px-4 py-6 sm:p-6">
+            <div>
+              <h3 className="text-base font-semibold leading-6 text-gray-900">
+                Citizen Information
+              </h3>
+              <p className="mt-1 text-sm text-gray-500">
+                Fill in the details below to register a new citizen in the
+                blockchain registry.
+              </p>
+            </div>
 
-            <form onSubmit={handleSubmit} className={styles.formContainer}>
-                <div className={styles.formGrid}>
-                    <div className={styles.formField}>
-                        <label htmlFor="name" className={styles.label}>Name</label>
-                        <input
-                            id="name"
-                            name="name"
-                            type="text"
-                            value={form.name}
-                            onChange={handleChange}
-                            autoComplete="name"
-                            className={styles.input}
-                            required
-                        />
-                    </div>
-                    <div className={styles.formField}>
-                        <label htmlFor="age" className={styles.label}>Age</label>
-                        <input
-                            id="age"
-                            name="age"
-                            type="number"
-                            value={form.age}
-                            onChange={handleChange}
-                            className={styles.input}
-                            required
-                        />
-                    </div>
-                    <div className={styles.formField}>
-                        <label htmlFor="city" className={styles.label}>City</label>
-                        <input
-                            id="city"
-                            name="city"
-                            type="text"
-                            value={form.city}
-                            onChange={handleChange}
-                            className={styles.input}
-                            required
-                        />
-                    </div>
-                    <div className={styles.formField}>
-                        <label htmlFor="note" className={styles.label}>Notes</label>
-                        <textarea
-                            id="note"
-                            name="note"
-                            value={form.note}
-                            onChange={handleChange}
-                            className={styles.textarea}
-                            required
-                        />
-                    </div>
+            <div className="grid grid-cols-6 gap-6">
+              <div className="col-span-6 sm:col-span-3">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium leading-6 text-gray-900"
+                >
+                  Name
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  value={form.name}
+                  onChange={handleChange}
+                  required
+                  className="mt-2 block w-full rounded-md border-0 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                />
+              </div>
+
+              <div className="col-span-6 sm:col-span-3">
+                <label
+                  htmlFor="age"
+                  className="block text-sm font-medium leading-6 text-gray-900"
+                >
+                  Age
+                </label>
+                <input
+                  type="number"
+                  name="age"
+                  id="age"
+                  value={form.age}
+                  onChange={handleChange}
+                  required
+                  className="mt-2 block w-full rounded-md border-0 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                />
+              </div>
+
+              <div className="col-span-6 sm:col-span-3">
+                <label
+                  htmlFor="city"
+                  className="block text-sm font-medium leading-6 text-gray-900"
+                >
+                  City
+                </label>
+                <input
+                  type="text"
+                  name="city"
+                  id="city"
+                  value={form.city}
+                  onChange={handleChange}
+                  required
+                  className="mt-2 block w-full rounded-md border-0 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                />
+              </div>
+
+              <div className="col-span-6">
+                <label
+                  htmlFor="notes"
+                  className="block text-sm font-medium leading-6 text-gray-900"
+                >
+                  Notes
+                </label>
+                <div className="mt-2">
+                  <textarea
+                    id="notes"
+                    name="notes"
+                    rows={3}
+                    className="mt-1 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    defaultValue={""}
+                  />
                 </div>
-
-                <button type="submit" className={styles.button} disabled={loading}>
-                    {loading ? 'Adding Citizen...' : 'Add Citizen'}
-                </button>
-            </form>
+              </div>
+            </div>
+          </div>
+          <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
+            <button
+              type="submit"
+              disabled={loading}
+              className="inline-flex justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              {loading ? "Adding Citizen..." : "Add Citizen"}
+            </button>
+          </div>
         </div>
-    );
+      </form>
+    </Layout>
+  );
 };
 
 export default AddCitizenForm;

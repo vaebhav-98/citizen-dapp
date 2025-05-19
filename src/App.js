@@ -1,5 +1,4 @@
 
-import React from 'react';
 import CitizenList from './components/CitizenList';
 import { ToastContainer } from 'react-toastify';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
