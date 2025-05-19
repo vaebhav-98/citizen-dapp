@@ -1,4 +1,3 @@
-
 import useCitizenContract from "../hooks/useCitizenContract";
 import { Link } from "react-router-dom";
 import Layout from "./Layout";
@@ -72,20 +71,23 @@ const CitizenList = () => {
                       </thead>
                       <tbody className="divide-y divide-gray-800">
                         {citizens.map((citizen, index) => (
-                          <tr key={index}>
-                            <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-300">
+                          <tr
+                            key={index}
+                            className="hover:bg-gray-700 hover:text-white transition-colors duration-200 cursor-pointer"
+                          >
+                            <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-300 transition duration-200">
                               {index}
                             </td>
-                            <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-300">
+                            <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-300 transition duration-200">
                               {citizen.name}
                             </td>
-                            <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-300">
+                            <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-300 transition duration-200">
                               {Number(citizen.age)}
                             </td>
-                            <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-300">
+                            <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-300 transition duration-200">
                               {citizen.city}
                             </td>
-                            <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-300">
+                            <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-300 transition duration-200">
                               {citizen.note}
                             </td>
                           </tr>
