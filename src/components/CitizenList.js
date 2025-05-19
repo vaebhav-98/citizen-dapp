@@ -1,13 +1,21 @@
 
 import React from 'react';
 import useCitizenContract from '../hooks/useCitizenContract';
+import { Link } from 'react-router-dom';
 
 const CitizenList = () => {
   const { citizens } = useCitizenContract();
 
   return (
     <div style={{ padding: '20px' }}>
-      <h2>All Citizens</h2>
+       <div style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: 'center'
+            }}>
+                <h2>All Citizens</h2>
+                <Link to={'/add'}>Add new citizen</Link>
+            </div>
       <table border="1" cellPadding="10" style={{ marginTop: '20px', width: '100%' }}>
         <thead>
           <tr>

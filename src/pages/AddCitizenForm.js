@@ -1,4 +1,4 @@
-import React from 'react';
+
 import useCitizenContract from '../hooks/useCitizenContract';
 import styles from './AddCitizenForm.module.css';
 
