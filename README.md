@@ -4,8 +4,6 @@ A Citizen (Dapp) that allows users to register and view citizens on the Sepolia 
 
 ---
 
----
-
 ## Features
 
 - Connect MetaMask wallet
@@ -13,8 +11,6 @@ A Citizen (Dapp) that allows users to register and view citizens on the Sepolia 
 - Interact with Ethereum smart contract
 - Fetch all citizens
 - Styled using CSS Modules
-
----
 
 ---
 
@@ -78,8 +74,6 @@ Access the app at `https://citizen-dapp.vercel.app/`
 2. Add the Sepolia Test Network
 3. Get test ETH from [https://sepoliafaucet.com](https://sepoliafaucet.com)
 4. Connect your wallet via the app UI
-
----
 
 ---
 
