@@ -67,6 +67,9 @@ npm run build
 - Netlify
 - GitHub Pages
 
+
+Access the app at `https://citizen-dapp.vercel.app/`
+
 ---
 
 ## MetaMask Setup Instructions
