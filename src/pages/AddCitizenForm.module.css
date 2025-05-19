@@ -1,0 +1,92 @@
+
+.container {
+    max-width: 36rem; 
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header {
+    font-size: 2.25rem;
+    font-weight: 600; 
+    color: #1f2937; 
+    margin-bottom: 0.5rem;
+}
+
+.subheader {
+    font-size: 1.125rem; 
+    color: #4b5563; 
+    margin-top: 0.5rem;
+}
+
+.formContainer {
+    margin-top: 4rem;
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .formGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+.formField {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1f2937; 
+    margin-bottom: 0.625rem;
+}
+
+.input, .textarea {
+    padding: 0.875rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #d1d5db; 
+    border-radius: 0.375rem;
+    background-color: white;
+    color: #1f2937;
+    transition: border-color 0.3s ease;
+}
+
+.input:focus, .textarea:focus {
+    border-color: #3b82f6;
+    outline: none;
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.button {
+    padding: 0.875rem 1.25rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #3b82f6;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1.5rem;
+}
+
+.button:hover {
+    background-color: #2563eb; 
+}
+
+.button:disabled {
+    background-color: #e5e7eb; 
+    cursor: not-allowed;
+}
