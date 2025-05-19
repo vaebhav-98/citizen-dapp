@@ -12,8 +12,6 @@ A Citizen (Dapp) that allows users to register and view citizens on the Sepolia 
 - Fetch all citizens
 - Styled using CSS Modules
 
----
-
 ## Frontend Technologies
 
 - React
@@ -21,8 +19,6 @@ A Citizen (Dapp) that allows users to register and view citizens on the Sepolia 
 - Web3.js
 - CSS Modules
 - MetaMask
-
----
 
 ## Getting Started
 
@@ -47,8 +43,6 @@ npm run dev
 
 Access the app at `http://localhost:3000`
 
----
-
 ## Deploying to Production
 
 ### 1. Build the App
@@ -66,7 +60,6 @@ npm run build
 
 Access the app at `https://citizen-dapp.vercel.app/`
 
----
 
 ## MetaMask Setup Instructions
 
@@ -75,7 +68,6 @@ Access the app at `https://citizen-dapp.vercel.app/`
 3. Get test ETH from [https://sepoliafaucet.com](https://sepoliafaucet.com)
 4. Connect your wallet via the app UI
 
----
 
 ## Author
 
