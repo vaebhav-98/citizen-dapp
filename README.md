@@ -2,8 +2,6 @@
 
 A Citizen (Dapp) that allows users to register and view citizens on the Sepolia testnet. The frontend is built using React and Web3.js, and interacts with a deployed smart contract.
 
----
-
 ## Features
 
 - Connect MetaMask wallet
